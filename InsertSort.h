@@ -26,14 +26,17 @@ void InsertSort(T* arr, size_t n)
 	{
 		//用temp保留，被覆盖后无法找到
 		T temp = arr[i];
-
+		
 		for (int j = i; j >= 0; --j)
 		{
 			//如果打破了有序，则进行覆盖
 			//否则，跳出循环
-			if (Compare(arr[j - 1],temp))
+			if (Compare()(arr[j - 1],temp))
 			{
-				arr[j] = arr[j - 1];
+				if (j - 1 >= 0)
+					arr[j] = arr[j - 1];
+				else
+					arr[j] = temp;
 			}
 			else
 			{
