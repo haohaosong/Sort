@@ -6,6 +6,21 @@
 * note:快速排序 
 */
 
+#include<iostream>
+using namespace std;
+
+#include<assert.h>
+
+void Print(int* a,size_t n)
+{
+	assert(a);
+	for (size_t i = 0; i < n; ++i)
+	{
+		cout << a[i] << " ";
+	}
+	cout << endl;
+}
+
 //快速排序
 //时间复杂度:O(N* N)
 //思想:
